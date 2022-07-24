@@ -12,6 +12,7 @@
         table{
             width:400px;
             border-collapse: collapse;
+            position: relative;
         }
         td,th{
             border:1px solid rgba(0, 0, 0, 0.452);
@@ -21,9 +22,17 @@
             background-color: #ccc;
             padding:5px;
         }
-        th:nth-child(2){
-            background-color:#013380;
-            color:#fff;
+        thead > tr > th {
+            position:sticky;
+            top:-1px;
+            background-color: #ccc;
+        }
+        
+        
+        tbody tr:nth-child(even){
+            /*odd em celulas impares*/
+            /*even em celulas pares*/
+            background-color: lightgray;
         }
         .numero{
             text-align: right;
@@ -41,9 +50,9 @@
     <table>
         <caption>População das unidades federativas</caption>
         <thead>
-            
-              <th>Estado</th>
-              <th>População</th>
+            <tr>
+              <th scope="col" style="width:200px;">Estado</th>
+              <th scope="col" >População</th>
             </tr>
         </thead>
         <tbody>
@@ -135,7 +144,10 @@
             <tr>
                 <td>Sergipe</td>
                 <td class="numero">2 338 474</td>
-            </tr>
+            </tr><body>
+                
+            </body>
+            </html>
             <tr>
                 <td>Rondonia</td>
                 <td class="numero">1 815 278</td>
@@ -156,10 +168,12 @@
                 <td>Roraima</td>
                 <td class="numero">652 713</td>
             </tr>
+           
+            
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</td>
+                <th scope="row">Total de Habitantes</td>
                 <td class="numero">188.970.273</td>
             </tr>
         </tfoot>
