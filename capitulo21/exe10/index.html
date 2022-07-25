@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colunas com colgroup</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        table{
+            width:400px;
+            border-collapse: collapse;
+           
+        }
+        td,th{
+            border:1px solid rgba(0, 0, 0, 0.452);
+            padding:10px;
+        }
+        td{
+            text-align: center;
+        }
+        .destaque{
+            background-color:lightgreen
+        }
+        col.cnome{
+            background-color: limegreen;
+        }
+        col.csexo,col.cidade{
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicio de tabela</h1>
+    <table>
+        <colgroup>
+           <col class="cnome">
+           <col class="csexo">
+           <col class="cidade">
+           <col class="cprof">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>26</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Paulo</td>
+            <td>M</td>
+            <td>19</td>
+            <td>Auxiliar</td>
+        </tr>
+        <tr>
+            <td>Vilma</td>
+            <td>F</td>
+            <td>24</td>
+            <td>Assistente</td>
+        </tr>
+        <tr>
+            <td>Paolo</td>
+            <td>M</td>
+            <td>36</td>
+            <td>Jogador</td>
+        </tr>
+    </table>
+</body>
+</html>
